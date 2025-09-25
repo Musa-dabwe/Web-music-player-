@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-top">
+                <i class="material-icons">arrow_back</i>
+                <div class="search-bar">
+                </div>
+                <button class="sort-button">Sort</button>
+            </div>
+        </header>
+
+        <main class="content">
+            <img src="http://decor2go.ca/cdn/shop/files/MusicManiaWallpaperMural_219598642_Music_kids_hobby_Modern_Colorful_livingroom.png?v=1715194266" alt="Release Radar" class="playlist-cover-art" id="main-cover-art">
+
+            <div class="playlist-info">
+                <p class="playlist-description">Catch all the latest music from artists you follow, plus new singles picked for you. Updates every Friday.</p>
+                <div class="playlist-author">
+                    <i class="material-icons spotify-icon">spotify</i>
+                    <span>Made for You</span>
+                </div>
+                <p class="playlist-duration">Import your music</p>
+            </div>
+
+            <div class="actions-bar">
+                <i class="material-icons">check_circle</i>
+                <i class="material-icons">arrow_downward</i>
+                <i class="material-icons">more_horiz</i>
+                <div class="play-button-container">
+                    <i class="material-icons shuffle-icon">shuffle</i>
+                    <a class="btn-floating btn-large waves-effect waves-light green" id="main-play-pause-btn">
+                        <i class="material-icons" id="main-play-pause-icon">play_arrow</i>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="track-list" id="track-list">
+                <!-- Tracks will be dynamically inserted here -->
+            </ul>
+        </main>
+        
+        <div class="now-playing-bar" id="now-playing-bar" style="display: none;">
+            <div class="track-info">
+                <img src="" alt="Album Art" id="now-playing-art">
+                <div>
+                    <p class="title" id="now-playing-title"></p>
+                    <p class="artist" id="now-playing-artist"></p>
+                </div>
+            </div>
+            <div class="controls">
+                <i class="material-icons">headset</i>
+                <i class="material-icons">add_circle_outline</i>
+                <i class="material-icons" id="player-play-pause-icon">play_arrow</i>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <footer class="bottom-nav">
+            <div class="nav-item">
+                <i class="material-icons">home</i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <i class="material-icons">search</i>
+                <span>Search</span>
+            </div>
+            <div class="nav-item">
+                <i class="material-icons">library_music</i>
+                <span>Your Library</span>
+            </div>
+            <div class="nav-item" id="create-btn">
+                <i class="material-icons">add_box</i>
+                <span>Create</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <audio id="audio-player"></audio>
+    <input type="file" id="file-input" multiple accept="audio/*" style="display: none;">
+
+    <!-- jsmediatags for metadata -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+
+    <!-- Main App Logic -->
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>

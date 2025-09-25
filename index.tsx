@@ -1,3 +1,4 @@
+
 // Fix for line 59: Property 'jsmediatags' does not exist on type 'Window & typeof globalThis'.
 // By declaring it on the window object.
 interface Window {
@@ -112,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!trackListEl) return;
         trackListEl.innerHTML = '';
         if (playlist.length === 0) {
-            playlistDurationEl.textContent = 'Import your music';
+            playlistDurationEl.textContent = '';
             return;
         }
 

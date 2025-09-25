@@ -1,4 +1,5 @@
 {
-  "name": "Android Manifest Analyzer",
-  "description": "Analyzes an AndroidManifest.xml file, explains its components, and generates boilerplate Kotlin code to help you start building your Android app."
+  "name": "Web player",
+  "description": "Analyzes an AndroidManifest.xml file, explains its components, and generates boilerplate Kotlin code to help you start building your Android app.",
+  "requestFramePermissions": []
 }

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const PLACEHOLDER_COVER_URL = 'http://decor2go.ca/cdn/shop/files/MusicManiaWallpaperMural_219598642_Music_kids_hobby_Modern_Colorful_livingroom.png?v=1715194266';
 
     // --- Event Listeners ---
-    createBtn.addEventListener('click', () => fileInput.click());
+    mainCoverArt.addEventListener('click', () => fileInput.click());
     fileInput.addEventListener('change', handleFileSelect);
 
     mainPlayPauseBtn.addEventListener('click', togglePlayPause);

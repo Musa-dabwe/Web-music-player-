@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fix for error on line 121: Cast to HTMLImageElement
     const nowPlayingArt = document.getElementById('now-playing-art') as HTMLImageElement;
     const mainCoverArt = document.getElementById('main-cover-art') as HTMLImageElement;
-    const importMusicBtn = document.getElementById('import-music-btn') as HTMLElement;
     const nowPlayingTitle = document.getElementById('now-playing-title') as HTMLElement;
     const nowPlayingArtist = document.getElementById('now-playing-artist') as HTMLElement;
     const progressBar = document.getElementById('progress-bar') as HTMLElement;
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const PLACEHOLDER_COVER_URL = 'http://decor2go.ca/cdn/shop/files/MusicManiaWallpaperMural_219598642_Music_kids_hobby_Modern_Colorful_livingroom.png?v=1715194266';
 
     // --- Event Listeners ---
-    importMusicBtn.addEventListener('click', () => fileInput.click());
+    createBtn.addEventListener('click', () => fileInput.click());
     fileInput.addEventListener('change', handleFileSelect);
 
     mainPlayPauseBtn.addEventListener('click', togglePlayPause);
@@ -113,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!trackListEl) return;
         trackListEl.innerHTML = '';
         if (playlist.length === 0) {
-            if (playlistDurationEl) playlistDurationEl.textContent = '';
+            playlistDurationEl.textContent = 'Import your music';
             return;
         }
 

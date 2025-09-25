@@ -13,24 +13,22 @@
 </head>
 <body>
     <div class="app-container">
-        <header class="app-header">
-            <div class="header-top">
-                <i class="material-icons">arrow_back</i>
-                <div class="search-bar">
-                </div>
-                <button class="sort-button">Sort</button>
-            </div>
-        </header>
-
         <main class="content">
             <img src="http://decor2go.ca/cdn/shop/files/MusicManiaWallpaperMural_219598642_Music_kids_hobby_Modern_Colorful_livingroom.png?v=1715194266" alt="Release Radar" class="playlist-cover-art" id="main-cover-art">
 
             <div class="playlist-info">
-                <p class="playlist-duration"></p>
+                <p class="playlist-description">Catch all the latest music from artists you follow, plus new singles picked for you. Updates every Friday.</p>
+                <div class="playlist-author">
+                    <i class="material-icons spotify-icon">spotify</i>
+                    <span>Made for You</span>
+                </div>
+                <p class="playlist-duration">Import your music</p>
             </div>
 
             <div class="actions-bar">
-                <i class="material-icons" id="import-music-btn">more_horiz</i>
+                <i class="material-icons">check_circle</i>
+                <i class="material-icons">arrow_downward</i>
+                <i class="material-icons">more_horiz</i>
                 <div class="play-button-container">
                     <i class="material-icons shuffle-icon">shuffle</i>
                     <a class="btn-floating btn-large waves-effect waves-light green" id="main-play-pause-btn">
@@ -84,7 +82,7 @@
     </div>
 
     <audio id="audio-player"></audio>
-    <input type="file" id="file-input" multiple accept="audio/*" class="visually-hidden">
+    <input type="file" id="file-input" multiple accept="audio/*" style="display: none;">
 
     <!-- jsmediatags for metadata -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
